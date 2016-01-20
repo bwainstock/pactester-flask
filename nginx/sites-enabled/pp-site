@@ -1,0 +1,14 @@
+server {
+    
+    listen 80;
+    server_name 198.199.105.77;
+
+    location /api/ {
+	proxy_pass http://app:8000;
+	proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+    }
+    location / {
+	alias /usr/share/nginx/html/;
+    }
+}

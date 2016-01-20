@@ -1,0 +1,18 @@
+---
+# file: pactester-flask/docker-compose.yml
+
+app:
+  build: ./app/
+  command: gunicorn -b 0.0.0.0:8000 --error-logfile "-" --access-logfile "-" pp:app
+#  command: python pp.py
+  volumes: 
+    - ./app/code:/usr/src/app
+  expose:
+    - "8000"
+
+nginx:
+  build: ./nginx/
+  links:
+    - app:app
+  ports:
+    - "80:80"  
