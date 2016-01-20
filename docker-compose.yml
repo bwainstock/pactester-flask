@@ -16,3 +16,5 @@ nginx:
     - app:app
   ports:
     - "80:80"  
+  volumes:
+    - ./nginx/content:/usr/share/nginx/html/
