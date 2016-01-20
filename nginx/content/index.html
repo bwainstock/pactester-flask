@@ -23,11 +23,22 @@
 
 
 
+	<p><span id="error"></span></p>
 
-	
-
-
-
+	<div id="info-form">
+        <form id="myip-form" method="post">
+	        <textarea id="pac-script" name="pac-script" rows="10" cols="30">
+	        </textarea>
+            <br>
+            <label for="myip">Set IP:</label>
+            <input type="text" name="myip" id="myip">
+            <br>
+            <label for="url">URL test:</label>
+            <input type="text" name="url" id="url">
+            <br>
+            <button id="info-btn" type="button">Submit</button>
+        </form>
+	</div>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
