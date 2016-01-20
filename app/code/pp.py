@@ -64,6 +64,7 @@ def uploadpac():
         test_url = request.form['test_url']
         proxy = proxy_test(pac_string, myip, test_url)
         print proxy
+        return proxy
     return "UPLOAD PAGE"
 
 

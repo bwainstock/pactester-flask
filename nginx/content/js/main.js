@@ -6,6 +6,9 @@ $(function() {
             myip: $('#myip').val(),
             test_url: $('#url').val()
         };
-        $.post('/api/uploadpac/', form_data );
+        var submit = $.post('/api/uploadpac/', form_data );
+        submit.done(function( data ) {
+           $('#error').html(data);
+        });
     });
 });
